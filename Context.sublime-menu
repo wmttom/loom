@@ -1,0 +1,17 @@
+[
+{
+    "caption": "loom",
+    "id": "loom",
+    "children":
+    [
+        {
+            "command": "mklist",
+            "caption": "toList"
+        },
+        {
+            "command": "distinct",
+            "caption": "distinct"
+        },
+    ]
+}
+]
