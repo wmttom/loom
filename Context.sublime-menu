@@ -5,6 +5,10 @@
     "children":
     [
         {
+            "command": "oneline",
+            "caption": "ToOneLine"
+        },
+        {
             "command": "mklist",
             "caption": "toList"
         },
@@ -12,6 +16,7 @@
             "command": "distinct",
             "caption": "distinct"
         },
+
     ]
 }
 ]
