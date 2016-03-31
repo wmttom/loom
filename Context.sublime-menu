@@ -16,6 +16,14 @@
             "command": "distinct",
             "caption": "distinct"
         },
+        {
+            "command": "underline2camel",
+            "caption": "underline2camel"
+        },
+        {
+            "command": "camel2underline",
+            "caption": "camel2underline"
+        },
 
     ]
 }
