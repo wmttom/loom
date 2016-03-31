@@ -42,6 +42,25 @@ class Underline2camelCommand(sublime_plugin.TextCommand):
         res = res.replace("Ios", "iOS")
         return res
 
+class Underline2camel4wordCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        for region in self.view.sel():
+            if not region.empty():
+                line = self.view.line(region)  
+                line_contents = self.view.substr(line)
+                res = "\n".join([Underline2camelCommand.underline_to_camel(word) for word
+                        in line_contents.split("\n")])
+                self.view.replace(edit, region, res)
+
+class Camel2underline4wordCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        for region in self.view.sel():
+            if not region.empty():
+                line = self.view.line(region)  
+                line_contents = self.view.substr(line)
+                res = "\n".join([Camel2underlineCommand.camel_to_underline(word) for word
+                        in line_contents.split("\n")])
+                self.view.replace(edit, region, res)
 
 class Camel2underlineCommand(sublime_plugin.TextCommand):
     def run(self, edit):

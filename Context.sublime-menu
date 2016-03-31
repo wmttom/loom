@@ -24,7 +24,14 @@
             "command": "camel2underline",
             "caption": "camel2underline"
         },
-
+        {
+            "command": "underline2camel4word",
+            "caption": "underline2camel for selection"
+        },
+        {
+            "command": "camel2underline4word",
+            "caption": "camel2underline for selection"
+        },
     ]
 }
 ]
