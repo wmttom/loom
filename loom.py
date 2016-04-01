@@ -46,20 +46,18 @@ class Underline2camel4wordCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for region in self.view.sel():
             if not region.empty():
-                line = self.view.line(region)  
-                line_contents = self.view.substr(line)
+                contents = self.view.substr(region)
                 res = "\n".join([Underline2camelCommand.underline_to_camel(word) for word
-                        in line_contents.split("\n")])
+                        in contents.split("\n")])
                 self.view.replace(edit, region, res)
 
 class Camel2underline4wordCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for region in self.view.sel():
             if not region.empty():
-                line = self.view.line(region)  
-                line_contents = self.view.substr(line)
+                contents = self.view.substr(region)
                 res = "\n".join([Camel2underlineCommand.camel_to_underline(word) for word
-                        in line_contents.split("\n")])
+                        in contents.split("\n")])
                 self.view.replace(edit, region, res)
 
 class Camel2underlineCommand(sublime_plugin.TextCommand):
